@@ -1,113 +1,117 @@
-
-/*
-	Style sheet Shortcode Exec PHP WordPress Plugin
-*/
+/**
+ * Styles for Shortcode Exec PHP WordPress Plugin
+ *
+ * @package WordPress
+ * @subpackage Shortcode_Exec_PHP
+ * @since 1.53
+ */
 
 /* Admin panel */
-#scep_admin_panel {
+#scep-admin-panel {
 	float: left;
 }
 
 /* Resources info panel */
-#scep_resources_panel {
+#scep-resources-panel {
+	background-color: #fffeeb;
+	border: 1px solid #ccc;
 	float: right;
+	margin-top: 30px;
 	padding: 10px;
 	width: 180px;
-	margin-top: 30px;
-	border: 1px solid #CCCCCC;
-	background-color: #FFFEEB;
 }
 
 /* Heading info panel */
-#scep_resources_panel h3 {
-	margin: 0.5em 0 1em 0;
+#scep-resources-panel h3 {
+	margin: 0.5em 0 1em;
 }
 
 /* Donate form info panel */
-#scep_resources_panel form {
-	margin: 1em 0 0.5em 0;
+#scep-resources-panel form {
+	margin: 1em 0 0.5em;
 }
 
 /* Shortcuts */
-#scep_shortcuts {
+#scep-shortcuts {
 	display: block;
 	margin: 20px 0 0;
 }
 
 /* Option titles */
-#scep_option_table th {
-	width: 500px;
-	padding: 0px;
+#scep-option-table th {
+	padding: 0;
 	vertical-align: middle;
+	width: 500px;
 }
 
 /* Option checkboxes */
-#scep_option_table input[type="checkbox"] {
+#scep-option-table input[type="checkbox"] {
 	margin: 0;
 }
 
 /* Option table cell with input */
-#scep_option_table .scep_cell_input {
+#scep-option-table .scep-cell-input {
 	padding: 0 6px 4px;
 }
 
 /* Option inputs */
-#scep_option_table input[type="text"] {
-	width: 75px;
+#scep-option-table input[type="text"] {
 	text-align: right;
+	width: 75px;
 }
 
-.scep_shortcode_name {
+.scep-shortcode-name {
 	width: 150px;
 }
 
-.scep_shortcode_description {
+.scep-shortcode-description {
 	width: 400px;
 }
 
-/* Code box height */
-#scep_option_width, #scep_option_height {
+/* Code box dimensions */
+#scep-option-width,
+#scep-option-height {
 	width: 50px;
 }
 
-.scep_message {
+.scep-message {
+	color: #d63638;
 	float: left;
 	font-weight: bold;
-	color: red;
 }
 
-.scep_explanation {
-	font-size: 9px;
-	text-decoration: italic;
+.scep-explanation {
 	display: block;
+	font-size: 9px;
+	font-style: italic;
 	padding-bottom: 10px;
 }
 
-.scep_parameters {
+.scep-parameters {
 	font-size: 9px;
 }
 
 /* Shortcode examples */
-#scep_example_table {
-	width: auto;
+#scep-example-table {
 	margin: 20px 0;
+	width: auto;
 }
 
-#scep_example_table td {
+#scep-example-table td {
 	padding: 0 5px;
 }
 
-.scep_example_title {
+.scep-example-title {
 	font-weight: bold;
 }
 
-.scep_example_explanation {
+.scep-example-explanation {
 	font-family: monospace;
 }
 
-#scep_pro {
-	border: black solid 1px;
-	padding: 0 10px 10px 10px;
-	margin: 10px 0 20px 0;
+#scep-pro {
+	border: 1px solid #000;
 	display: inline-block;
+	margin: 10px 0 20px;
+	padding: 0 10px 10px;
 }

@@ -1,9 +1,10 @@
 ﻿=== Shortcode Exec PHP ===
 Contributors: M66B, dabelon
 Tags: admin, shortcode, run, php, eval, execute, exec, code, post, posts, page, pages, comment, comments, sidebar, widget, widgets, rss, feed, feeds, AJAX, wpmu, tinymce
-Requires at least: 3.1
-Tested up to: 4.1.1
-Stable tag: 1.52
+Requires at least: 5.0
+Tested up to: 6.8
+Stable tag: 1.53
+Requires PHP: 7.4
 
 Execute arbitrary, reusable PHP code in posts, pages, comments, widgets and RSS feeds using shortcodes in a safe and easy way
 
@@ -119,6 +120,20 @@ This means for example that a *global $wpdb;* is needed to access the [database 
 
 = Development version =
 * You can download the development version [here](http://downloads.wordpress.org/plugin/shortcode-exec-php.zip)
+
+= 1.53 =
+* Complete plugin modernization and restructure
+* Component-based architecture replacing monolithic design
+* Enhanced security system with function blacklisting and validation
+* Dual editor integration (Gutenberg blocks + modern TinyMCE)
+* Language files relocated to /languages/ directory
+* Legacy files properly archived to @archived/v1.52-legacy/
+* Full WordPress coding standards compliance
+* PHP 7.4+ requirement with modern syntax and patterns
+* Comprehensive unit test coverage
+* Enhanced admin interface with CodeMirror integration
+* Improved error handling and user feedback
+* Security warnings and admin notices for safe usage
 
 = 1.52 =
 * Fixed inserting shortcode
