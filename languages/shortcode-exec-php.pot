@@ -1,0 +1,499 @@
+# Translation Template for Shortcode Exec PHP
+# Copyright (C) 2024 WordPress Community
+# This file is distributed under the same license as the Shortcode Exec PHP package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Shortcode Exec PHP 1.53\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/plugins/shortcode-exec-php/\n"
+"POT-Creation-Date: 2024-12-04 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Core plugin strings
+msgid "Shortcode Exec PHP requires PHP 7.4 or later."
+msgstr ""
+
+msgid "Plugin Activation Error"
+msgstr ""
+
+msgid "Shortcode Exec PHP requires WordPress 5.0 or later."
+msgstr ""
+
+msgid "Shortcode Exec PHP Security Notice:"
+msgstr ""
+
+msgid "This plugin allows execution of arbitrary PHP code. Only install and use if you trust all administrators on this site."
+msgstr ""
+
+# Security class strings
+msgid "Code must be a string."
+msgstr ""
+
+msgid "Code exceeds maximum length of 10KB."
+msgstr ""
+
+#. translators: %s: Function name
+msgid "Blocked function detected: %s"
+msgstr ""
+
+#. translators: %s: Pattern description
+msgid "Dangerous code pattern detected: %s"
+msgstr ""
+
+msgid "Could not create temporary file for syntax checking."
+msgstr ""
+
+msgid "Could not write to temporary file for syntax checking."
+msgstr ""
+
+#. translators: %s: PHP syntax error message
+msgid "PHP syntax error: %s"
+msgstr ""
+
+# Editor Integration strings
+msgid "Select a shortcode"
+msgstr ""
+
+msgid "Shortcode Name"
+msgstr ""
+
+msgid "Parameters"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Insert"
+msgstr ""
+
+msgid "No shortcodes available. Create one first."
+msgstr ""
+
+msgid "Insert PHP Shortcode"
+msgstr ""
+
+msgid "Security check failed"
+msgstr ""
+
+msgid "Insufficient permissions"
+msgstr ""
+
+msgid "Shortcode name is required"
+msgstr ""
+
+msgid "Invalid shortcode name"
+msgstr ""
+
+msgid "Shortcode is required"
+msgstr ""
+
+msgid "Select a shortcode to display"
+msgstr ""
+
+# Block Editor strings (JavaScript)
+msgid "PHP Shortcode"
+msgstr ""
+
+msgid "Insert and configure PHP shortcodes with live preview"
+msgstr ""
+
+msgid "php"
+msgstr ""
+
+msgid "shortcode"
+msgstr ""
+
+msgid "code"
+msgstr ""
+
+msgid "dynamic"
+msgstr ""
+
+msgid "Failed to load shortcodes"
+msgstr ""
+
+msgid "Network error loading shortcodes"
+msgstr ""
+
+msgid "Preview failed"
+msgstr ""
+
+msgid "Preview network error"
+msgstr ""
+
+msgid "Loading shortcodes..."
+msgstr ""
+
+msgid "Retry"
+msgstr ""
+
+msgid "Select a shortcode..."
+msgstr ""
+
+msgid "Shortcode Settings"
+msgstr ""
+
+msgid "Shortcode"
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "×"
+msgstr ""
+
+msgid "Add Parameter"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Optional shortcode content..."
+msgstr ""
+
+msgid "Generating preview..."
+msgstr ""
+
+msgid "No preview available"
+msgstr ""
+
+msgid "Select a shortcode from the settings panel to get started."
+msgstr ""
+
+msgid "No shortcodes available. Create one in the admin panel first."
+msgstr ""
+
+msgid "Parameters:"
+msgstr ""
+
+msgid "Content:"
+msgstr ""
+
+msgid "Loading preview..."
+msgstr ""
+
+msgid "Preview:"
+msgstr ""
+
+msgid "Simple PHP Shortcode"
+msgstr ""
+
+msgid "Quick insert for PHP shortcodes without parameters"
+msgstr ""
+
+msgid "simple"
+msgstr ""
+
+msgid "Select shortcode..."
+msgstr ""
+
+msgid "PHP Shortcode"
+msgstr ""
+
+# Admin template strings
+msgid "Add/Edit Shortcode"
+msgstr ""
+
+msgid "Enter shortcode name"
+msgstr ""
+
+msgid "Only letters, numbers, underscores, and hyphens allowed. Must not start with a number."
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Optional description"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Shortcode Options"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Buffer output"
+msgstr ""
+
+msgid "PHP Code"
+msgstr ""
+
+msgid "Enter PHP code (without <?php tags)"
+msgstr ""
+
+msgid "Security Warning:"
+msgstr ""
+
+msgid "This code will be executed on your server. Only add trusted code from reliable sources."
+msgstr ""
+
+msgid "Save Shortcode"
+msgstr ""
+
+msgid "Test Shortcode"
+msgstr ""
+
+msgid "Existing Shortcodes"
+msgstr ""
+
+msgid "No shortcodes have been created yet."
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Plugin Settings"
+msgstr ""
+
+msgid "Enable Shortcodes In"
+msgstr ""
+
+msgid "Widgets"
+msgstr ""
+
+msgid "Excerpts"
+msgstr ""
+
+msgid "Comments"
+msgstr ""
+
+msgid "RSS Feeds"
+msgstr ""
+
+msgid "Not recommended for security"
+msgstr ""
+
+msgid "Code Editor Width"
+msgstr ""
+
+msgid "Width of the code editor in pixels (200-2000)."
+msgstr ""
+
+msgid "Code Editor Height"
+msgstr ""
+
+msgid "Height of the code editor in pixels (100-1000)."
+msgstr ""
+
+msgid "TinyMCE Integration"
+msgstr ""
+
+msgid "Enable TinyMCE button"
+msgstr ""
+
+msgid "Save Settings"
+msgstr ""
+
+msgid "Security Information"
+msgstr ""
+
+msgid "Important:"
+msgstr ""
+
+msgid "Only administrators can create/edit shortcodes"
+msgstr ""
+
+msgid "All code executions are logged"
+msgstr ""
+
+msgid "Dangerous functions are blocked"
+msgstr ""
+
+msgid "Execution time is limited"
+msgstr ""
+
+msgid "Usage Examples"
+msgstr ""
+
+msgid "Basic:"
+msgstr ""
+
+msgid "With parameters:"
+msgstr ""
+
+msgid "With content:"
+msgstr ""
+
+msgid "Test Results"
+msgstr ""
+
+msgid "WYSIWYG View"
+msgstr ""
+
+msgid "HTML Source"
+msgstr ""
+
+# Legacy strings that should be preserved from existing translations
+msgid "Shortcode Exec PHP Administration"
+msgstr ""
+
+msgid "Settings updated"
+msgstr ""
+
+msgid "Make shortcodes global"
+msgstr ""
+
+msgid "Execute shortcodes in (sidebar) widgets"
+msgstr ""
+
+msgid "Execute shortcodes in excerpts"
+msgstr ""
+
+msgid "Execute shortcodes in comments"
+msgstr ""
+
+msgid "Execute shortcodes in RSS feeds"
+msgstr ""
+
+msgid "Disable html entity encoding"
+msgstr ""
+
+msgid "Width of code box"
+msgstr ""
+
+msgid "Height of code box"
+msgstr ""
+
+msgid "Do not display code editor initially"
+msgstr ""
+
+msgid "Delete options and shortcodes on deactivation (and when upgrading!)"
+msgstr ""
+
+msgid "I have donated to this plugin"
+msgstr ""
+
+msgid "Save Changes"
+msgstr ""
+
+msgid "Shortcodes"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Are you sure to delete"
+msgstr ""
+
+msgid "Output echoed"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Revert"
+msgstr ""
+
+msgid "Privacy in the Sustainable Plugins Sponsorship Network"
+msgstr ""
+
+msgid "Resources"
+msgstr ""
+
+msgid "Frequently asked questions"
+msgstr ""
+
+msgid "Shortcode API"
+msgstr ""
+
+msgid "PHP manual"
+msgstr ""
+
+msgid "Support page"
+msgstr ""
+
+msgid "About the author"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "Unexpected output, do not use ECHO but RETURN"
+msgstr ""
+
+msgid "not enabled"
+msgstr ""
+
+msgid "Shortcode exists"
+msgstr ""
+
+msgid "Name missing"
+msgstr ""
+
+msgid "Add button to TinyMCE editor"
+msgstr ""
+
+msgid "Required capability for TinyMCE button"
+msgstr ""
+
+msgid "Last attributes:"
+msgstr ""
+
+msgid "Go to"
+msgstr ""
+
+msgid "Required capability for authors to execute shortcodes"
+msgstr ""
+
+msgid "I don't want to support this plugin with the Sustainable Plugins Sponsorship Network"
+msgstr ""
+
+msgid "Import/export"
+msgstr ""
+
+msgid "Try right click if it doesn't work"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Existing shortcodes with the same name will be overwritten!"
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Only available if SimpleXML available"
+msgstr ""
+
+msgid "Shortcodes imported:"
+msgstr ""
+
+msgid "Disable wpautop"
+msgstr ""
+
+msgid "Insert your PHP code, minus the &lt;?php and ?&gt; tags"
+msgstr ""

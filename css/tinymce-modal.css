@@ -1,0 +1,452 @@
+/**
+ * TinyMCE Modal Styles for Shortcode Exec PHP
+ * 
+ * Styles for the modern TinyMCE modal interface using
+ * WordPress core modal system.
+ *
+ * @package WordPress
+ * @subpackage Shortcode_Exec_PHP
+ * @since 1.53
+ */
+
+/* Modal Container */
+.shortcode-exec-php-modal-content {
+	padding: 20px;
+	max-width: 600px;
+	min-height: 400px;
+	background: #ffffff;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.4;
+}
+
+/* Shortcode Selection */
+.shortcode-selection {
+	margin-bottom: 20px;
+}
+
+.shortcode-selection label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #1d2327;
+	font-size: 14px;
+}
+
+.shortcode-selection select {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	background: #ffffff;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #1d2327;
+}
+
+.shortcode-selection select:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+/* Configuration Section */
+#shortcode-config {
+	border-top: 1px solid #e0e0e0;
+	padding-top: 20px;
+}
+
+/* Parameters Section */
+.shortcode-parameters {
+	margin-bottom: 20px;
+}
+
+.shortcode-parameters h4 {
+	margin: 0 0 12px 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: #1d2327;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#parameters-container {
+	margin-bottom: 12px;
+}
+
+.parameter-row {
+	margin-bottom: 12px;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.parameter-row input {
+	padding: 8px 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #1d2327;
+}
+
+.parameter-row input:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+.param-key {
+	flex: 1;
+	min-width: 120px;
+}
+
+.param-value {
+	flex: 2;
+	min-width: 180px;
+}
+
+.remove-parameter {
+	flex-shrink: 0;
+	background: #d63638;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 12px;
+	font-size: 12px;
+	cursor: pointer;
+	transition: background-color 0.15s ease-in-out;
+}
+
+.remove-parameter:hover {
+	background: #b32d2e;
+}
+
+.remove-parameter:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+#add-parameter {
+	background: #f6f7f7;
+	border: 1px solid #8c8f94;
+	color: #1d2327;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 13px;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+}
+
+#add-parameter:hover {
+	background: #f0f0f1;
+	border-color: #8c8f94;
+}
+
+#add-parameter:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+/* Content Section */
+.shortcode-content {
+	margin: 20px 0;
+}
+
+.shortcode-content label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #1d2327;
+	font-size: 14px;
+}
+
+.shortcode-content textarea {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #1d2327;
+	resize: vertical;
+	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+	line-height: 1.5;
+}
+
+.shortcode-content textarea:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+/* Preview Section */
+.shortcode-preview {
+	margin: 20px 0;
+}
+
+.shortcode-preview h4 {
+	margin: 0 0 12px 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.preview-box {
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 16px;
+	background-color: #f9f9f9;
+	min-height: 60px;
+	margin-bottom: 12px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	line-height: 1.5;
+	overflow-wrap: break-word;
+}
+
+.preview-box em {
+	color: #646970;
+	font-style: italic;
+}
+
+.preview-box .error {
+	color: #d63638;
+	font-weight: 500;
+}
+
+#preview-shortcode {
+	background: #f6f7f7;
+	border: 1px solid #8c8f94;
+	color: #1d2327;
+	border-radius: 4px;
+	padding: 8px 16px;
+	font-size: 13px;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+}
+
+#preview-shortcode:hover {
+	background: #f0f0f1;
+}
+
+#preview-shortcode:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+/* Modal Actions */
+.modal-actions {
+	margin-top: 30px;
+	text-align: right;
+	border-top: 1px solid #e0e0e0;
+	padding-top: 20px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+#insert-shortcode {
+	background: #2271b1;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.15s ease-in-out;
+}
+
+#insert-shortcode:hover:not(:disabled) {
+	background: #135e96;
+}
+
+#insert-shortcode:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+#insert-shortcode:disabled {
+	background: #c3c4c7;
+	color: #646970;
+	cursor: not-allowed;
+}
+
+#cancel-shortcode {
+	background: #f6f7f7;
+	color: #1d2327;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	padding: 10px 20px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+}
+
+#cancel-shortcode:hover {
+	background: #f0f0f1;
+}
+
+#cancel-shortcode:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+/* Loading States */
+.loading-spinner {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #c3c4c7;
+	border-top: 2px solid #2271b1;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin-right: 8px;
+	vertical-align: text-bottom;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 782px) {
+	.shortcode-exec-php-modal-content {
+		padding: 16px;
+		min-height: auto;
+	}
+	
+	.parameter-row {
+		flex-direction: column;
+		gap: 8px;
+		align-items: stretch;
+	}
+	
+	.param-key,
+	.param-value {
+		flex: none;
+		width: 100%;
+		min-width: auto;
+	}
+	
+	.modal-actions {
+		flex-direction: column-reverse;
+		text-align: stretch;
+	}
+	
+	#insert-shortcode,
+	#cancel-shortcode {
+		width: 100%;
+		text-align: center;
+	}
+	
+	.shortcode-parameters h4 {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+	.shortcode-exec-php-modal-content {
+		background: #1e1e1e;
+		color: #ffffff;
+	}
+	
+	.shortcode-selection label,
+	.shortcode-content label,
+	.shortcode-parameters h4,
+	.shortcode-preview h4 {
+		color: #ffffff;
+	}
+	
+	.shortcode-selection select,
+	.parameter-row input,
+	.shortcode-content textarea {
+		background: #2c2c2c;
+		border-color: #444444;
+		color: #ffffff;
+	}
+	
+	.preview-box {
+		background: #2c2c2c;
+		border-color: #444444;
+		color: #ffffff;
+	}
+	
+	.preview-box em {
+		color: #cccccc;
+	}
+	
+	#add-parameter,
+	#preview-shortcode,
+	#cancel-shortcode {
+		background: #2c2c2c;
+		border-color: #444444;
+		color: #ffffff;
+	}
+	
+	#add-parameter:hover,
+	#preview-shortcode:hover,
+	#cancel-shortcode:hover {
+		background: #3c3c3c;
+	}
+	
+	.modal-actions {
+		border-top-color: #444444;
+	}
+	
+	#shortcode-config {
+		border-top-color: #444444;
+	}
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+	.shortcode-selection select,
+	.parameter-row input,
+	.shortcode-content textarea,
+	.preview-box {
+		border-width: 2px;
+		border-color: #000000;
+	}
+	
+	#insert-shortcode {
+		background: #0000ff;
+	}
+	
+	#insert-shortcode:hover:not(:disabled) {
+		background: #000080;
+	}
+	
+	.remove-parameter {
+		background: #ff0000;
+	}
+	
+	.remove-parameter:hover {
+		background: #cc0000;
+	}
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+	#insert-shortcode,
+	#cancel-shortcode,
+	#add-parameter,
+	#preview-shortcode,
+	.remove-parameter,
+	.parameter-row input,
+	.shortcode-selection select,
+	.shortcode-content textarea {
+		transition: none;
+	}
+	
+	.loading-spinner {
+		animation: none;
+		border: 2px solid #2271b1;
+		border-top: 2px solid #c3c4c7;
+	}
+}

@@ -1,0 +1,50 @@
+# Security Checker Configuration for Shortcode Exec PHP Plugin
+# This file configures the Enlightn Security Checker
+
+# Paths to check for security vulnerabilities
+paths:
+  - composer.lock
+  - composer.json
+
+# Format for output (json, yaml, or ansi)
+format: ansi
+
+# Exit code on vulnerabilities found (0 = no exit, 1 = exit on any vulnerability)
+exit_code: 1
+
+# Minimum severity level to report (low, medium, high, critical)
+min_severity: low
+
+# Custom advisories directory (optional)
+# advisories_dir: ./advisories
+
+# Exclude specific vulnerabilities by CVE ID (optional)
+# exclude:
+#   - CVE-2021-12345
+
+# Include additional checks
+checks:
+  - composer_lock_exists
+  - composer_audit
+  
+# WordPress specific security patterns to watch for
+wordpress_patterns:
+  # Check for common WordPress security issues
+  sql_injection:
+    - "\\$wpdb->query\\s*\\(\\s*['\"].*\\$.*['\"]"
+    - "\\$wpdb->prepare\\s*\\(\\s*['\"].*['\"]\\s*\\)"
+  
+  xss_prevention:
+    - "echo\\s+\\$_[GET|POST|REQUEST]"
+    - "print\\s+\\$_[GET|POST|REQUEST]"
+  
+  file_inclusion:
+    - "include\\s*\\(\\s*\\$_"
+    - "require\\s*\\(\\s*\\$_"
+  
+  php_execution:
+    - "eval\\s*\\("
+    - "system\\s*\\("
+    - "exec\\s*\\("
+    - "shell_exec\\s*\\("
+    - "passthru\\s*\\("

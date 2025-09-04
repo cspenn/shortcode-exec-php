@@ -1,0 +1,343 @@
+/**
+ * Gutenberg Block Editor Styles for Shortcode Exec PHP
+ * 
+ * Styles for the Block Editor interface, including the shortcode
+ * selector block and associated components.
+ *
+ * @package WordPress
+ * @subpackage Shortcode_Exec_PHP
+ * @since 1.53
+ */
+
+/* Block Editor Specific Styles */
+.wp-block-shortcode-exec-php-shortcode-selector {
+	background: #ffffff;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	padding: 0;
+	margin: 16px 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease;
+}
+
+.wp-block-shortcode-exec-php-shortcode-selector:hover {
+	border-color: #1e73be;
+	box-shadow: 0 2px 8px rgba(30, 115, 190, 0.1);
+}
+
+.wp-block-shortcode-exec-php-shortcode-selector.is-selected {
+	border-color: #1e73be;
+	box-shadow: 0 0 0 2px rgba(30, 115, 190, 0.2);
+}
+
+/* Shortcode Block Content */
+.shortcode-exec-php-placeholder {
+	text-align: center;
+	padding: 40px 20px;
+	color: #757575;
+	font-style: italic;
+	background: #f8f9fa;
+	border: 2px dashed #e0e0e0;
+	border-radius: 6px;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.shortcode-exec-php-block-content {
+	padding: 20px;
+}
+
+.shortcode-exec-php-block-content h4 {
+	margin: 0 0 12px 0;
+	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+	font-size: 16px;
+	color: #1e73be;
+	background: #f0f6fc;
+	padding: 8px 12px;
+	border-radius: 4px;
+	border-left: 4px solid #1e73be;
+}
+
+/* Parameter Display */
+.shortcode-parameters-display {
+	margin: 12px 0;
+}
+
+.shortcode-parameters-display strong {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: #1d2327;
+}
+
+.shortcode-parameters-list {
+	background: #f6f7f7;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	padding: 12px;
+	margin: 0;
+	list-style: none;
+}
+
+.shortcode-parameters-list li {
+	margin: 6px 0;
+	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+	font-size: 13px;
+}
+
+.shortcode-parameters-list code {
+	background: #ffffff;
+	border: 1px solid #d0d5dd;
+	border-radius: 3px;
+	padding: 2px 6px;
+	font-size: 12px;
+}
+
+/* Content Display */
+.shortcode-content-display {
+	margin: 12px 0;
+}
+
+.shortcode-content-display strong {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: #1d2327;
+}
+
+.shortcode-content-box {
+	background: #f6f7f7;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	padding: 12px;
+	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+	font-size: 13px;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+/* Preview Display */
+.shortcode-preview-display {
+	margin-top: 16px;
+}
+
+.shortcode-preview-display strong {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: #1d2327;
+}
+
+.shortcode-preview-box {
+	border: 2px solid #e8f4fd;
+	background: #ffffff;
+	border-radius: 6px;
+	padding: 16px;
+	min-height: 60px;
+	position: relative;
+	overflow: auto;
+}
+
+.shortcode-preview-loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 60px;
+	color: #757575;
+	font-style: italic;
+}
+
+.shortcode-preview-error {
+	color: #d63638;
+	font-style: italic;
+	padding: 12px;
+	background: #fef1f1;
+	border: 1px solid #f5c2c7;
+	border-radius: 4px;
+}
+
+/* Simple Shortcode Block */
+.wp-block-shortcode-exec-php-simple-shortcode {
+	background: #f8f9fa;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	padding: 16px;
+	margin: 16px 0;
+	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+	font-size: 14px;
+	color: #1e73be;
+}
+
+.wp-block-shortcode-exec-php-simple-shortcode.is-selected {
+	border-color: #1e73be;
+	box-shadow: 0 0 0 2px rgba(30, 115, 190, 0.2);
+}
+
+/* Inspector Controls Styling */
+.shortcode-exec-php-inspector-controls .components-panel__body {
+	border: none;
+}
+
+.shortcode-exec-php-inspector-controls .components-base-control {
+	margin-bottom: 16px;
+}
+
+.shortcode-exec-php-inspector-controls .components-base-control__label {
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+/* Parameter Input Styling */
+.shortcode-parameter-row {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 12px;
+	align-items: flex-end;
+}
+
+.shortcode-parameter-row .components-base-control {
+	flex: 1;
+	margin-bottom: 0;
+}
+
+.shortcode-parameter-row .components-base-control:first-child {
+	flex: 0 0 120px;
+}
+
+.shortcode-parameter-row .components-button {
+	flex: 0 0 auto;
+	height: 36px;
+	margin-bottom: 0;
+}
+
+/* Add Parameter Button */
+.shortcode-add-parameter-button {
+	margin-top: 8px;
+}
+
+/* Block Icons */
+.shortcode-exec-php-block-icon {
+	font-size: 48px;
+	margin-bottom: 16px;
+	opacity: 0.7;
+}
+
+/* Loading States */
+.shortcode-exec-php-loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	color: #757575;
+}
+
+.shortcode-exec-php-loading .components-spinner {
+	margin-right: 12px;
+}
+
+/* Error States */
+.shortcode-exec-php-error {
+	padding: 16px;
+	color: #d63638;
+	background: #fef1f1;
+	border: 1px solid #f5c2c7;
+	border-radius: 4px;
+	margin: 16px 0;
+}
+
+/* Notice Styling */
+.shortcode-exec-php-notice {
+	margin: 16px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 782px) {
+	.shortcode-parameter-row {
+		flex-direction: column;
+		gap: 12px;
+	}
+	
+	.shortcode-parameter-row .components-base-control:first-child {
+		flex: 1;
+	}
+	
+	.shortcode-exec-php-block-content {
+		padding: 16px;
+	}
+	
+	.shortcode-exec-php-placeholder {
+		padding: 30px 16px;
+		min-height: 80px;
+	}
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+	.wp-block-shortcode-exec-php-shortcode-selector {
+		background: #1e1e1e;
+		border-color: #3c434a;
+	}
+	
+	.shortcode-exec-php-placeholder {
+		background: #2c2c2c;
+		border-color: #3c434a;
+		color: #a0a5aa;
+	}
+	
+	.shortcode-exec-php-block-content h4 {
+		background: #1e2a3a;
+		color: #4fb3d9;
+	}
+	
+	.shortcode-parameters-list,
+	.shortcode-content-box {
+		background: #2c2c2c;
+		border-color: #3c434a;
+		color: #e0e0e0;
+	}
+	
+	.shortcode-parameters-list code {
+		background: #1e1e1e;
+		border-color: #3c434a;
+		color: #e0e0e0;
+	}
+	
+	.shortcode-preview-box {
+		background: #1e1e1e;
+		border-color: #3c434a;
+	}
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+	.wp-block-shortcode-exec-php-shortcode-selector {
+		border-color: #000000;
+		border-width: 2px;
+	}
+	
+	.wp-block-shortcode-exec-php-shortcode-selector:hover,
+	.wp-block-shortcode-exec-php-shortcode-selector.is-selected {
+		border-color: #0000ff;
+		border-width: 3px;
+	}
+	
+	.shortcode-exec-php-block-content h4 {
+		background: #000000;
+		color: #ffffff;
+		border-left-color: #0000ff;
+	}
+}
+
+/* Focus States for Accessibility */
+.wp-block-shortcode-exec-php-shortcode-selector:focus-within {
+	outline: 2px solid #1e73be;
+	outline-offset: 2px;
+}
+
+.shortcode-parameter-row .components-text-control__input:focus,
+.shortcode-parameter-row .components-textarea-control__input:focus {
+	border-color: #1e73be;
+	box-shadow: 0 0 0 2px rgba(30, 115, 190, 0.2);
+}

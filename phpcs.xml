@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<ruleset name="Shortcode Exec PHP">
+    <description>WordPress Coding Standards for Shortcode Exec PHP Plugin</description>
+
+    <!-- What to scan -->
+    <file>.</file>
+
+    <!-- How to scan -->
+    <!-- Usage instructions: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->
+    <!-- Annotated ruleset: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+    <arg value="sp"/> <!-- Show sniff and progress -->
+    <arg name="basepath" value="./"/><!-- Strip the file paths down to the relevant bit -->
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+    <arg name="parallel" value="8"/><!-- Enables parallel processing when available for faster results -->
+
+    <!-- Rules: Check PHP version compatibility -->
+    <!-- https://github.com/PHPCompatibility/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions -->
+    <config name="testVersion" value="7.4-"/>
+
+    <!-- Rules: WordPress Coding Standards -->
+    <!-- https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards -->
+    <!-- https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki/Customizable-sniff-properties -->
+    <rule ref="WordPress">
+        <!-- Exclude specific sniffs that are not relevant for this plugin -->
+        <exclude name="WordPress.Files.FileName"/>
+        <exclude name="WordPress.NamingConventions.ValidVariableName"/>
+        <exclude name="WordPress.NamingConventions.ValidFunctionName"/>
+        <exclude name="Squiz.Commenting.FileComment"/>
+        <exclude name="Generic.Commenting.DocComment"/>
+        <exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
+    </rule>
+
+    <!-- Let's also check that everything is properly documented -->
+    <rule ref="WordPress-Docs">
+        <exclude name="Squiz.Commenting.FileComment"/>
+        <exclude name="Generic.Commenting.DocComment"/>
+    </rule>
+
+    <!-- Add in some extra rules from other standards -->
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <rule ref="Generic.Commenting.Todo"/>
+
+    <!-- Check for PHP cross-version compatibility -->
+    <rule ref="PHPCompatibility"/>
+
+    <!-- Exclude the Composer vendor directory -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+
+    <!-- Exclude the build directory -->
+    <exclude-pattern>/build/*</exclude-pattern>
+
+    <!-- Exclude third party libraries -->
+    <!-- Legacy third-party libraries archived in v1.53 modernization -->
+    <exclude-pattern>/@archived/*</exclude-pattern>
+    <exclude-pattern>/tinymce/*</exclude-pattern>
+    <exclude-pattern>/js/*</exclude-pattern>
+
+    <!-- Exclude test files -->
+    <exclude-pattern>/tests/*</exclude-pattern>
+
+    <!-- These rules are being set as warnings instead of errors, so we can error check the entire codebase -->
+    <rule ref="WordPress.NamingConventions.ValidHookName">
+        <properties>
+            <property name="additionalWordDelimiters" value="-/."/>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.Arrays.MultipleStatementAlignment">
+        <properties>
+            <property name="exact" value="false" />
+            <property name="maxColumn" value="1000" />
+        </properties>
+    </rule>
+
+    <!-- Set text domain used for internationalization -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="shortcode-exec-php"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- Allow for theme specific exceptions to the file name rules based on the theme hierarchy -->
+    <rule ref="WordPress.Files.FileName">
+        <properties>
+            <property name="strict_class_file_names" value="false" />
+        </properties>
+    </rule>
+
+    <!-- Set the minimum supported WordPress version -->
+    <rule ref="WordPress.WP.DeprecatedFunctions">
+        <properties>
+            <property name="minimum_supported_version" value="3.1"/>
+        </properties>
+    </rule>
+
+    <!-- Verify that the text_domain is set to the desired text-domain -->
+    <rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="WordPress.WP.I18n.NoHtmlInTranslation">
+        <type>warning</type>
+    </rule>
+</ruleset>

@@ -1,0 +1,57 @@
+{
+    "name": "wordpress/shortcode-exec-php",
+    "description": "WordPress plugin for executing PHP code via shortcodes",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Marcel Bokhorst",
+            "homepage": "http://blog.bokhorst.biz/about/"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "wp-coding-standards/wpcs": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.10",
+        "phpstan/extension-installer": "^1.2",
+        "szepeviktor/phpstan-wordpress": "^1.3",
+        "enlightn/security-checker": "^2.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    },
+    "autoload": {
+        "files": [
+            "shortcode-exec-php.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs --standard=phpcs.xml",
+        "phpcs-fix": "phpcbf --standard=phpcs.xml",
+        "php-cs-fixer": "php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff",
+        "php-cs-fixer-fix": "php-cs-fixer fix --config=.php-cs-fixer.php",
+        "test": "phpunit --configuration=phpunit.xml",
+        "phpstan": "phpstan analyse --configuration=phpstan.neon",
+        "security-check": "security-checker security:check composer.lock",
+        "qa": [
+            "@phpcs",
+            "@phpstan",
+            "@test",
+            "@security-check"
+        ]
+    }
+}

@@ -1,0 +1,117 @@
+/**
+ * Frontend Block Styles for Shortcode Exec PHP
+ * 
+ * Styles for blocks when rendered on the frontend of the site.
+ * Minimal styling to ensure blocks display properly without
+ * interfering with theme styles.
+ *
+ * @package WordPress
+ * @subpackage Shortcode_Exec_PHP
+ * @since 1.53
+ */
+
+/* Frontend Block Container */
+.wp-block-shortcode-exec-php-shortcode-selector {
+	margin: 1em 0;
+	clear: both;
+}
+
+/* Shortcode Output Container */
+.shortcode-exec-php-output {
+	position: relative;
+}
+
+/* Error Display on Frontend */
+.shortcode-exec-php-error {
+	background: #f8d7da;
+	border: 1px solid #f5c2c7;
+	border-radius: 4px;
+	color: #721c24;
+	padding: 12px 16px;
+	margin: 1em 0;
+	font-size: 14px;
+}
+
+.shortcode-exec-php-error::before {
+	content: "⚠ ";
+	font-weight: bold;
+}
+
+/* Loading State on Frontend */
+.shortcode-exec-php-loading {
+	background: #e7f3ff;
+	border: 1px solid #b8daff;
+	border-radius: 4px;
+	color: #004085;
+	padding: 12px 16px;
+	margin: 1em 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+.shortcode-exec-php-loading::before {
+	content: "⏳ ";
+}
+
+/* Placeholder for Empty Shortcodes */
+.shortcode-exec-php-placeholder {
+	background: #f8f9fa;
+	border: 2px dashed #dee2e6;
+	border-radius: 4px;
+	color: #6c757d;
+	padding: 20px;
+	text-align: center;
+	font-style: italic;
+	margin: 1em 0;
+}
+
+/* Simple Shortcode Block Frontend */
+.wp-block-shortcode-exec-php-simple-shortcode {
+	margin: 1em 0;
+}
+
+/* Accessibility Improvements */
+.shortcode-exec-php-output[aria-live] {
+	/* Screen reader announcements for dynamic content */
+	position: relative;
+}
+
+/* Print Styles */
+@media print {
+	.shortcode-exec-php-error,
+	.shortcode-exec-php-loading,
+	.shortcode-exec-php-placeholder {
+		background: transparent !important;
+		color: #000000 !important;
+		border: 1px solid #000000 !important;
+	}
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+	.shortcode-exec-php-error {
+		background: #ffffff;
+		border: 2px solid #000000;
+		color: #000000;
+	}
+	
+	.shortcode-exec-php-loading {
+		background: #ffffff;
+		border: 2px solid #000000;
+		color: #000000;
+	}
+	
+	.shortcode-exec-php-placeholder {
+		background: #ffffff;
+		border: 2px dashed #000000;
+		color: #000000;
+	}
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+	.shortcode-exec-php-output,
+	.wp-block-shortcode-exec-php-shortcode-selector {
+		transition: none;
+	}
+}
